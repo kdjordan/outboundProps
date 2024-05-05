@@ -1,0 +1,31 @@
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.raise-enter-active {
+    animation: raise .3s linear;
+  }
+  .raise-leave-active {
+    animation: lower .3s linear;
+  }
+
+  @keyframes raise {
+    0% {
+      max-height: 0vh;
+      opacity: 1;
+    }
+    100% {
+      max-height: 80vh;
+      opacity: 1;
+    }
+  }
+
+  @keyframes lower {
+    0% {
+      max-height: 80vh;
+      opacity: 1;
+    }
+    100% {
+      max-height: 0vh;
+      opacity: 1;
+    }
+  }
+  
