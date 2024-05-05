@@ -7,41 +7,20 @@
 			<div class="header-container__right">
 				<nav>
 					<ul>
-						<router-link
-							to="/welcome"
-							class="header-container__right--link"
-							>Home</router-link
+					<router-link v-for="home in homes"
+						:key="home.id" 
+						:to="`${home.name}`" 
+						class="header-container__right--link"
+						active-class="isActive"
 						>
-						<router-link
-							to="/home1"
-							class="header-container__right--link"
-							active-class="isActive"
-							>Oswego</router-link
-						>
-						<router-link
-							to="/home2"
-							class="header-container__right--link"
-							active-class="isActive"
-							>Columbia</router-link
-						>
-						<router-link
-							to="/home3"
-							class="header-container__right--link"
-							active-class="isActive"
-							>Laurelwood</router-link
-						>
-						<router-link
-							to="/home4"
-							class="header-container__right--link"
-							active-class="isActive"
-							>Willamette</router-link
-						>
-						<router-link
-							to=""
-							@click.native="doEmailModal"
-							class="header-container__right--link"
-							>Contact</router-link
-						>
+						{{ home.name }}
+					</router-link>
+					<router-link
+						to=""
+						@click.native="doEmailModal"
+						class="header-container__right--link"
+						>Contact</router-link
+					> 
 					</ul>
 				</nav>
 			</div>
@@ -51,17 +30,28 @@
 
 <script>
 	export default {
-		methods: {
-			doEmailModal() {
-				this.$store.commit('setModalContact', true);
-				this.$store.commit('toggleModal');
-			},
-		},
+		data() {
+			return {
+				homes: [
+				{ id: 1, name: 'Oswego' },
+				{ id: 2, name: 'Columbia' },
+				{ id: 3, name: 'Laurelwood' },
+				{ id: 4, name: 'Willamette' }
+
+			]
+			}
+		}
+		// methods: {
+		// 	doEmailModal() {
+		// 		this.$store.commit('setModalContact', true);
+		// 		this.$store.commit('toggleModal');
+		// 	},
+		// },
 	};
 </script>
 
-<style lang="scss">
-	@import '../scss/_variables.scss';
+<style lang="scss" scoped>
+	@import '@/scss/_variables.scss';
 
 	.isActive {
 		border-bottom: 2px solid #042a64 !important;
@@ -102,8 +92,6 @@
 
 					&:hover {
 						color: #042a64;
-						border-bottom: 2px solid #042a64;
-						border-top: 2px solid #042a64;
 					}
 				}
 			}

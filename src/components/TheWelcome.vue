@@ -39,7 +39,7 @@
 							</div>
 							<div class="welcome__details--buttons">
 								<div>
-									<router-link to="/home1">
+									<router-link to="/oswego">
 										<button class="btn-both-sides">
 											Begin Tour of Maple Wood Grove
 										</button>

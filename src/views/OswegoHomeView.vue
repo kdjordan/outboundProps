@@ -1,6 +1,6 @@
 <template>
 	<div class="page1">
-		<Header />
+		<TheHeader />
 		<main @click="closeAll"></main>
 		<div>
 			<transition name="raise">
@@ -182,10 +182,10 @@
 </template>
 
 <script>
-	import Header from '../components/Header.vue';
+	import TheHeader from '@/components/TheHeader.vue';
 	export default {
 		components: {
-			Header,
+			TheHeader,
 		},
 		data() {
 			return {
@@ -242,10 +242,10 @@
 	};
 </script>
 
-<style lang="scss">
-	@import '../scss/_variables.scss';
-	@import '../scss/_typography.scss';
-	@import '../scss/_page.scss';
+<style lang="scss" scoped>
+	@import '@/scss/_variables.scss';
+	@import '@/scss/_typography.scss';
+	@import '@/scss/_page.scss';
 	// @import '../../scss/_animations.scss';
 
 	main {
@@ -253,7 +253,7 @@
 	}
 
 	.page1 {
-		background-image: url('./../../assets/homes/home1/home-hero.jpg') !important;
+		background-image: url('@/assets/homes/home1/home-hero.jpg') !important;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
