@@ -3,10 +3,15 @@
 		<div class="welcome">
 			<div class="welcome__container">
 				<div class="welcome__content">
-					<div class="welcome__title">OutBound Properties</div>
-					<div class="welcome__subtitle">- Presents -</div>
-					<div class="welcome__images">
-						<img src="@/assets/mwgLogos/SVG/logo1-1.svg" :key="index" />
+					<div class="welcome__content--title">
+						OutBound Properties
+					</div>
+					<div class="welcome__content--subtitle">- Presents -</div>
+					<div class="welcome__content--image">
+						<img
+							src="@/assets/mwgLogos/SVG/logo1-1.svg"
+							:key="index"
+						/>
 					</div>
 					<div>
 						<p>
@@ -18,6 +23,7 @@
 							Both Sides Construction, a business owned and operated
 							by Don for 30+ years.
 						</p>
+						<hr />
 						<div class="welcome__details">
 							<div class="welcome__details--location">
 								<div>
@@ -32,20 +38,24 @@
 								<div>HOMES AVAILABLE: 4</div>
 							</div>
 							<div class="welcome__details--buttons">
-								<router-link to="/home1"
-									><button class="btn-both-sides">
-										Begin Tour of MAple Wood Grove
-									</button></router-link
-								>
-
-								<a
-									href="https://www.bothsidesconstruction.com/"
-									target="_blank"
-									class="details__buttons--link"
-									><button class="btn-both-sides">
-										Learn ABout Both Sides Construction
-									</button></a
-								>
+								<div>
+									<router-link to="/home1">
+										<button class="btn-both-sides">
+											Begin Tour of Maple Wood Grove
+										</button>
+									</router-link>
+								</div>
+								<div>
+									<a
+										href="https://www.bothsidesconstruction.com/"
+										target="_blank"
+										class="details__buttons--link"
+									>
+										<button class="btn-both-sides">
+											Learn About Both Sides Construction
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -55,14 +65,12 @@
 	</div>
 </template>
 
-<script>
-	
-</script>
+<script></script>
 
-<style lang="scss">
-	@import '../scss/_variables.scss';
-	@import '../scss/_typography.scss';
-	@import '../scss/_animations.scss';
+<style lang="scss" scoped>
+	@import '@/scss/_variables.scss';
+	@import '@/scss/_typography.scss';
+	@import '@/scss/_animations.scss';
 
 	.fade-enter-active,
 	.fade-leave-active {
@@ -72,36 +80,30 @@
 		opacity: 0;
 	}
 
-	p {
-		width: 80%;
-		margin: 0 auto !important;
-		text-align: center;
-		padding: 2rem 0 1rem 0;
-	}
-
-
-	.details {
-		text-align: center;
-	}
-
 	.welcome {
 		background-image: url('../assets/homes/home1/home-hero.jpg');
-
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
 		height: 100vh;
+        width: 100vw;
 		position: absolute;
 		top: 0;
 		left: 0;
+        
 
 		&__container {
 			background: $colorWhite;
 			width: 80%;
 			margin: 0 auto;
-			padding: 2rem;
-			margin-top: 2%;
+			padding: 1rem;
+			margin-top: 5%;
 			min-height: 0% !important;
+            max-width: 1250px;
+
+			@media (max-width: 560px) {
+				width: 95%;
+			}
 		}
 
 		&__content {
@@ -111,34 +113,36 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-		}
-	}
 
-	img {
-		width: 100%;
-		object-fit: cover;
-	}
+			&  hr {
+                margin: 1rem 0;
+			}
 
-	.welcome {
-		&__title {
-			font-size: 2rem;
-			text-transform: uppercase;
-			text-align: center;
-		}
+            & div > p {
+                text-align: center;
+                font-size: 1.1rem;
+                margin: 2rem;
+            }
 
-		&__subtitle {
-			padding: 0.5rem 0;
-		}
+			&--title {
+				font-size: 2rem;
+				text-transform: uppercase;
+				text-align: center;
+			}
 
-		&__images {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
+			&--subtitle {
+				padding: 0.5rem 0;
+			}
 
-			& img {
-				
-                max-width: 250px;
+			&--image {
+                margin-top: 1rem;
+				width: 100%;
+				max-width: 200px;
+				object-fit: cover;
+			}
+
+			@media (max-width: 560) {
+				padding: 10px;
 			}
 		}
 
@@ -146,22 +150,32 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 			font-family: $fontRoboto;
 
 			&--location {
-				text-align: center;
+				text-align: left;
 				margin-bottom: 1rem;
 
 				& a {
 					color: #2c3e50;
-					// padding-bottom: 2px;
-					border-bottom: 1px solid #2c3e50;
+					font-weight: bold;
+                    text-decoration: underline;
 					transition: all 0.4s;
-
 					&:hover {
-						border-bottom: 1px solid transparent;
+						font-weight: 900;
 					}
 				}
+			}
+
+			&--buttons {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+                gap: 20px;
+                margin-bottom: 1rem;
 			}
 		}
 	}
@@ -180,6 +194,16 @@
 		&:hover {
 			background: $color1;
 			color: white;
+		}
+	}
+
+	@media (min-width: 750px) {
+		.welcome__details--buttons {
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: center;
 		}
 	}
 </style>
