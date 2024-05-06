@@ -17,7 +17,7 @@
 					</router-link>
 					<router-link
 						to=""
-						@click.native="doEmailModal"
+						
 						class="header-container__right--link"
 						>Contact</router-link
 					> 

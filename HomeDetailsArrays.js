@@ -1,0 +1,22 @@
+export const OswegoDetailsArray = [
+"Introducing a captivating home that effortlessly blends elegance and functionality. This stunning residence boasts 4 bedrooms and 3 baths, offering an abundance of space for comfortable living. Step inside and be greeted by a world of refinement and luxury.",
+"Indulge in the quiet sophistication of the library, a haven for relaxation and intellectual pursuits. Imagine curling up with a favorite book or using the space as a private study for work or creative endeavors.",
+"The front and back porches beckon you to embrace the beauty of outdoor living. Sip your morning coffee while basking in the gentle breeze on the front porch, or host memorable gatherings on the spacious back porch, ideal for entertaining friends and loved ones.",
+"Prepare to be enchanted by the vaulted great room, a grand centerpiece of the home. With its soaring ceilings and abundant natural light, this remarkable space invites you to create cherished memories with family and friends. The seamless flow into the open kitchen and dining room provides a perfect setting for culinary adventures and shared meals.",
+"The large open kitchen is a chef’s dream, featuring top-of-the-line appliances, ample counter space, and exquisite finishes. Whether you’re a culinary enthusiast or simply enjoy preparing delicious meals, this kitchen is designed to inspire your inner chef.",
+"Retreat to the luxurious master suite, a sanctuary of tranquility and comfort. Unwind in the spacious bedroom, rejuvenate in the well-appointed en-suite bath, and discover an oasis of relaxation. The additional bedrooms offer versatility and comfort, accommodating guests, children, or providing a space for hobbies and personal pursuits.",
+"This home is a true masterpiece, combining timeless design with modern amenities. From the meticulous craftsmanship to the thoughtfully designed layout, every detail has been carefully considered to create a haven of elegance and functionality.",
+"Don’t miss the opportunity to make this exceptional residence your own. Experience a lifestyle of unparalleled comfort and sophistication in this remarkable home."
+]
+
+export const ColumbiaDetailsArray = [
+"Introducing the Keagan Home, a captivating residence nestled within a new exclusive community in NE Portland, Oregon. This exceptional home offers a generous 2650 sq ft of living space, thoughtfully designed to combine comfort, style, and functionality.",
+"Step inside and be greeted by an atmosphere of warmth and sophistication. With 4 bedrooms and 3 baths, this home provides ample room for your family’s needs. The well-appointed bedrooms offer privacy and relaxation, ensuring a peaceful retreat for everyone.",
+"The Keagan Home features a 2-car garage, providing convenient parking and storage space for your vehicles and belongings. Enjoy the convenience of having your cars securely housed, protected from the elements.",
+"Discover the joy of outdoor living on the inviting back porch. Whether you’re savoring a morning cup of coffee or hosting a delightful gathering with friends and family, this outdoor oasis offers the perfect setting to enjoy the natural beauty of the surroundings.",
+"Inside, the Keagan Home embraces an open concept design, allowing for seamless transitions between the various living spaces. The spacious layout creates an atmosphere of togetherness, whether you’re entertaining guests or spending quality time with loved ones.",
+"The heart of the home lies in the well-appointed kitchen, which is sure to inspire your inner chef. With its modern appliances, ample storage, and stylish finishes, this culinary haven is perfectly suited for creating delicious meals and cherished memories.",
+"The Keagan Home exudes a sense of elegance and craftsmanship, with attention to detail evident throughout. From the high-quality materials to the meticulously chosen fixtures and finishes, every aspect of this home has been thoughtfully curated to provide a comfortable and luxurious living experience.",
+"Located within a new exclusive community in NE Portland, the Keagan Home offers more than just a place to live—it provides an opportunity to be part of a prestigious and welcoming neighborhood. Experience the charm of the community, where neighbors become friends, and a true sense of belonging is fostered.",
+"Don’t miss the chance to make the Keagan Home your own. Embrace a lifestyle of comfort, convenience, and modern living in this remarkable residence."
+]

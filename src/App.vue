@@ -1,9 +1,6 @@
 <template>
 	<div>
-		<router-view v-slot="{ Component }">
-    <transition name="fade">
-      <component :is="Component" />
-    </transition>
+		<router-view>
     </router-view>
 		<transition name="fade">
 			<div v-if="store.modalOpen">
