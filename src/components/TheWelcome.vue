@@ -1,60 +1,48 @@
 <template>
-	<div>
-		<div class="welcome">
-			<div class="welcome__container">
-				<div class="welcome__content">
-					<div class="welcome__content--title">
-						OutBound Properties
-					</div>
-					<div class="welcome__content--subtitle">- Presents -</div>
-					<div class="welcome__content--image">
-						<img
-							src="@/assets/mwg-2.png"
-						/>
-					</div>
-					<div>
-						<p>
-							Maple Wood Grove is an exclusive development in
-							Northeast Portland Oregon. This project is the
-							culmination of years work by Valerie Nipper and Don
-							Etter. Both are long time Portland residents, and have
-							deep roots in the community. All homes will be built by
-							Both Sides Construction, a business owned and operated
-							by Don for 30+ years.
-						</p>
-						<hr />
-						<div class="welcome__details">
-							<div class="welcome__details--location">
-								<div>
-									LOCATION:
-									<a
-										href="https://goo.gl/maps/Wp3XGMfnXJQ2byUJ8"
-										target="_blank"
-									>
-										169th St and Halsey</a
-									>
-								</div>
-								<div>HOMES AVAILABLE: 4</div>
+	<div class="welcome">
+		<div class="welcome__container">
+			<div class="welcome__content">
+				<div class="welcome__content--title">OutBound Properties</div>
+				<div class="welcome__content--subtitle">- Presents -</div>
+				<div class="welcome__content--image">
+					<img src="@/assets/mwg-2.png" />
+				</div>
+				<div>
+					<p>
+						Introducing Maple Wood Grove: an elite enclave nestled in Northeast Portland, Oregon. Years of relentless dedication by Valerie Nipper and Don Etter have brought this vision to life. With deep ties to the Portland community, they've crafted a masterpiece. Every home in this prestigious development will bear the hallmark of Both Sides Construction, spearheaded by Don for over three decades.
+					</p>
+					<hr />
+					<div class="welcome__details">
+						<div class="welcome__details--location">
+							<div>
+								LOCATION:
+								<a
+									href="https://goo.gl/maps/Wp3XGMfnXJQ2byUJ8"
+									target="_blank"
+								>
+									169th St and Halsey</a
+								>
 							</div>
-							<div class="welcome__details--buttons">
-								<div>
-									<router-link to="/rowan">
-										<button class="btn-both-sides">
-											Begin Tour of Maple Wood Grove
-										</button>
-									</router-link>
-								</div>
-								<div>
-									<a
-										href="https://www.bothsidesconstruction.com/"
-										target="_blank"
-										class="details__buttons--link"
-									>
-										<button class="btn-both-sides">
-											Learn About Both Sides Construction
-										</button>
-									</a>
-								</div>
+							<div>HOMES AVAILABLE: 4</div>
+						</div>
+						<div class="welcome__details--buttons">
+							<div>
+								<router-link to="/rowan">
+									<button class="btn-both-sides">
+										Begin Tour of Maple Wood Grove
+									</button>
+								</router-link>
+							</div>
+							<div>
+								<a
+									href="https://www.bothsidesconstruction.com/"
+									target="_blank"
+									class="details__buttons--link"
+								>
+									<button class="btn-both-sides">
+										Learn About Both Sides Construction
+									</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -69,59 +57,51 @@
 <style lang="scss" scoped>
 	@import '@/scss/_variables.scss';
 	@import '@/scss/_typography.scss';
-	@import '@/scss/_animations.scss';
-
-	.fade-enter-active,
-	.fade-leave-active {
-		transition: opacity 0.5s ease-in-out;
-	}
-	.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-		opacity: 0;
-	}
 
 	.welcome {
 		background-image: url('../assets/outbound-welcome.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center;
-		height: 100vh;
-    width: 100vw;
+		height: auto;
+		min-height: 100vh;
+		width: 100vw;
 		position: absolute;
 		top: 0;
 		left: 0;
-        
+		margin: 0;
 
 		&__container {
 			background: $colorWhite;
 			width: 80%;
+			border-radius: 10px;
 			margin: 0 auto;
 			padding: 1rem;
 			margin-top: 5%;
-			min-height: 0% !important;
-      max-width: 1250px;
+			max-width: 1250px;
 
-			@media (max-width: 560px) {
-				width: 95%;
-			}
+			// @media (max-width: 560px) {
+			// 	width: 95%;
+			// }
 		}
 
 		&__content {
 			border: 1px solid grey;
+			border-radius: 10px;
 			padding: 1rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 
-			&  hr {
-                margin: 1rem 0;
+			& hr {
+				margin: 1rem 0;
 			}
 
-            & div > p {
-                text-align: center;
-                font-size: 1.1rem;
-                margin: 2rem;
-            }
+			& div > p {
+				text-align: center;
+				font-size: 1.1rem;
+				margin: 2rem;
+			}
 
 			&--title {
 				font-size: 2rem;
@@ -134,7 +114,7 @@
 			}
 
 			&--image {
-                margin-top: 1rem;
+				margin-top: 1rem;
 				width: 100%;
 				max-width: 500px;
 				object-fit: cover;
@@ -159,7 +139,7 @@
 				& a {
 					color: #2c3e50;
 					font-weight: bold;
-                    text-decoration: underline;
+					text-decoration: underline;
 					transition: all 0.4s;
 					&:hover {
 						font-weight: 900;
@@ -173,8 +153,8 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-                gap: 20px;
-                margin-bottom: 1rem;
+				gap: 20px;
+				margin-bottom: 1rem;
 			}
 		}
 	}
@@ -197,9 +177,8 @@
 	}
 
 	img {
-    width: 100%;
-    object-fit: cover;
-}
+		width: 100%;
+	}
 
 	@media (min-width: 750px) {
 		.welcome__details--buttons {
