@@ -17,7 +17,6 @@
 					</router-link>
 					<router-link
 						to=""
-						
 						class="header-container__right--link"
 						>Contact</router-link
 					> 
@@ -33,10 +32,10 @@
 		data() {
 			return {
 				homes: [
-				{ id: 1, name: 'Oswego' },
-				{ id: 2, name: 'Columbia' },
-				{ id: 3, name: 'Laurelwood' },
-				{ id: 4, name: 'Willamette' }
+				{ id: 1, name: 'rowan' },
+				{ id: 2, name: 'keagan' },
+				{ id: 3, name: 'myles' },
+				{ id: 4, name: 'nadia' }
 
 			]
 			}

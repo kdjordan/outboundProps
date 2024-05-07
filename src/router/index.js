@@ -2,8 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router';
 import TheWelcome from '@/components/TheWelcome.vue';
 import HomeDetails from '@/components/HomeDetails.vue';
 import {
-	OswegoDetailsArray,
-	ColumbiaDetailsArray,
+	RowanDetailsArray,
+	KeaganDetailsArray,
+	MylesDetailsArray,
+	NadiaDetailsArray
 } from '../../HomeDetailsArrays';
 
 const router = createRouter({
@@ -15,60 +17,68 @@ const router = createRouter({
 			component: TheWelcome,
 		},
 		{
-			path: '/oswego',
-			name: 'oswego',
+			path: '/rowan',
+			name: 'rowan',
 			component: HomeDetails,
 			props: {
 				home: {
 					id: 1,
-					name: 'Oswego',
-					price: '$200,000',
-					squareFootage: '1500 sqft',
-					background: '/src/assets/homes/home1/home-hero.jpg',
-					descriptionArray: OswegoDetailsArray,
+					name: 'Rowan',
+					price: 'TBD',
+					footage: '2244 sqft',
+					beds: 4,
+					baths: 3,
+					background: '/src/assets/homes/rowan.png',
+					descriptionArray: RowanDetailsArray,
 				},
 			},
 		},
 		{
-			path: '/columbia',
+			path: '/keagan',
 			component: HomeDetails,
 			props: {
 				home: {
 					id: 2,
-					name: 'Columbia',
-					price: '$250,000',
+					name: 'Keagan',
+					price: 'TBD',
 					squareFootage: '1800 sqft',
-          background: '/src/assets/homes/home2/home2-hero.jpg',
-          descriptionArray: ColumbiaDetailsArray,
+					beds: 4,
+					baths: 3,
+          background: '/src/assets/homes/keagan.png',
+          descriptionArray: KeaganDetailsArray,
 				},
 			},
 		},
 
 		{
-			path: '/laurelwood',
+			path: '/myles',
 			component: HomeDetails,
 			props: {
 				home: {
 					id: 3,
-					name: 'Laurelwood',
-					price: '$220,000',
-					squareFootage: '1600 sqft',
-          background: '/src/assets/homes/home3/home3-hero.jpg',
-          descriptionArray: ColumbiaDetailsArray,
+					name: 'Myles',
+					price: 'TBD',
+					squareFootage: '2942 sqft',
+					beds: 4,
+					baths: 3,
+          background: '/src/assets/homes/myles.png',
+          descriptionArray: MylesDetailsArray,
 				},
 			},
 		},
 		{
-			path: '/willamette',
+			path: '/nadia',
 			component: HomeDetails,
 			props: {
 				home: {
 					id: 4,
-					name: 'Willamette',
-					price: '$300,000',
+					name: 'Nadia',
+					price: 'TBD',
 					squareFootage: '2000 sqft',
-          background: '/src/assets/homes/home4/home4-hero.jpg',
-          descriptionArray: ColumbiaDetailsArray,
+					beds: 3,
+					baths: 2,
+          background: '/src/assets/homes/nadia.png',
+          descriptionArray: NadiaDetailsArray,
 				},
 			},
 		}

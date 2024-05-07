@@ -1,4 +1,4 @@
-export const OswegoDetailsArray = [
+export const RowanDetailsArray = [
 "Introducing a captivating home that effortlessly blends elegance and functionality. This stunning residence boasts 4 bedrooms and 3 baths, offering an abundance of space for comfortable living. Step inside and be greeted by a world of refinement and luxury.",
 "Indulge in the quiet sophistication of the library, a haven for relaxation and intellectual pursuits. Imagine curling up with a favorite book or using the space as a private study for work or creative endeavors.",
 "The front and back porches beckon you to embrace the beauty of outdoor living. Sip your morning coffee while basking in the gentle breeze on the front porch, or host memorable gatherings on the spacious back porch, ideal for entertaining friends and loved ones.",
@@ -9,7 +9,7 @@ export const OswegoDetailsArray = [
 "Don’t miss the opportunity to make this exceptional residence your own. Experience a lifestyle of unparalleled comfort and sophistication in this remarkable home."
 ]
 
-export const ColumbiaDetailsArray = [
+export const KeaganDetailsArray = [
 "Introducing the Keagan Home, a captivating residence nestled within a new exclusive community in NE Portland, Oregon. This exceptional home offers a generous 2650 sq ft of living space, thoughtfully designed to combine comfort, style, and functionality.",
 "Step inside and be greeted by an atmosphere of warmth and sophistication. With 4 bedrooms and 3 baths, this home provides ample room for your family’s needs. The well-appointed bedrooms offer privacy and relaxation, ensuring a peaceful retreat for everyone.",
 "The Keagan Home features a 2-car garage, providing convenient parking and storage space for your vehicles and belongings. Enjoy the convenience of having your cars securely housed, protected from the elements.",
@@ -19,4 +19,29 @@ export const ColumbiaDetailsArray = [
 "The Keagan Home exudes a sense of elegance and craftsmanship, with attention to detail evident throughout. From the high-quality materials to the meticulously chosen fixtures and finishes, every aspect of this home has been thoughtfully curated to provide a comfortable and luxurious living experience.",
 "Located within a new exclusive community in NE Portland, the Keagan Home offers more than just a place to live—it provides an opportunity to be part of a prestigious and welcoming neighborhood. Experience the charm of the community, where neighbors become friends, and a true sense of belonging is fostered.",
 "Don’t miss the chance to make the Keagan Home your own. Embrace a lifestyle of comfort, convenience, and modern living in this remarkable residence."
+]
+
+export const MylesDetailsArray = [
+  "Introducing The Myles Home, an exquisite residence situated on a spacious .21 acre lot. This remarkable property offers a perfect balance of size, comfort, and modern elegance, making it an ideal choice for those seeking a luxurious living experience.",
+  "With 4 bedrooms and 3 baths, The Myles Home provides ample space for your family’s needs. Each bedroom is designed to offer privacy and tranquility, ensuring a peaceful retreat for everyone. The well-appointed bathrooms boast modern fixtures and finishes, adding a touch of sophistication to your daily routines.",
+  "Step inside and be captivated by the open floorplan of the downstairs area, creating a seamless flow between the various living spaces. The thoughtfully designed layout allows for effortless entertaining and comfortable everyday living. Whether you’re hosting gatherings or spending quality time with loved ones, The Myles Home is designed to accommodate your every need.",
+  "Embrace the versatility of the den, a space that can be tailored to suit your lifestyle. Whether utilized as a home office, study, or play area, this additional room offers endless possibilities to create a personalized space that meets your unique requirements.",
+  "The great room stands as a testament to luxurious living, boasting a grandeur that is sure to impress. The spaciousness and abundance of natural light create an inviting ambiance that sets the stage for memorable gatherings and cherished moments with family and friends.",
+  "Step outside onto the rear porch and immerse yourself in the beauty of the surroundings. This outdoor sanctuary is perfect for relaxing evenings, morning coffees, or al fresco dining, allowing you to enjoy the tranquility and serenity of your own private oasis.",
+  "The Myles Home also features an attached garage, providing convenient parking and storage options. With its good-sized lot, there is ample space for outdoor activities, gardening, or even the possibility of expanding your living area in the future.",
+  "Discover the perfect blend of luxury, comfort, and spaciousness within The Myles Home. This exceptional residence offers a true sanctuary from the outside world while being conveniently located near all the amenities NE Portland has to offer.",
+  "Make The Myles Home your haven, where you can create lasting memories and enjoy a life of elegance and sophistication. Don’t miss the opportunity to own this exquisite property and experience the epitome of luxurious living."
+]
+
+export const NadiaDetailsArray = [
+  "Introducing the Nadia Home, a charming and thoughtfully designed residence that combines functionality with contemporary style. Nestled on a generous .14 acre lot, this exceptional property offers a perfect blend of comfort, convenience, and versatility.",
+  "Step inside the Nadia Home and be welcomed by a warm and inviting atmosphere. With 3 bedrooms and 2 baths, this residence provides ample space for your family’s needs. Each bedroom is crafted with comfort in mind, providing a tranquil retreat for rest and relaxation.",  
+  "Experience the ultimate entertainment haven with the dedicated gaming room, designed for hours of fun and excitement. Whether you’re a video game enthusiast, a fan of tabletop games, or desire a space for leisure activities, this room will be the center of entertainment for family and friends.",  
+  "The attached garage of the Nadia Home offers more than just parking space. Discover the convenience of a separate shop area, providing a dedicated workspace for hobbies, DIY projects, or extra storage. This versatile area allows you to pursue your passions and keep your belongings organized.",  
+  "Additionally, the Nadia Home offers a separate office, providing a quiet and focused environment for work or study. Whether you work from home or require a dedicated space for productivity, this office area offers the privacy and tranquility needed to maximize efficiency.",  
+  "Escape to the inviting back porch, a serene retreat where you can unwind and enjoy the outdoors. Whether you’re sipping your morning coffee or hosting a small gathering, this outdoor space is perfect for creating memorable moments and embracing the beauty of your surroundings.",  
+  "Situated on a .14 acre lot, the Nadia Home provides ample space for outdoor activities, gardening, or simply enjoying the open air. It offers the perfect balance between size and manageability, providing room to create your own outdoor oasis while requiring less maintenance.",  
+  "Experience the joy of living in a home that effortlessly combines style, functionality, and comfort. The Nadia Home is thoughtfully designed to meet the needs of modern living, offering a sanctuary where memories are made and cherished.",  
+  "Embrace the opportunity to make the Nadia Home your own, where you can enjoy the perfect balance of work, play, and relaxation. Don’t miss out on owning this exceptional property and creating a lifestyle tailored to your desires."
+
 ]

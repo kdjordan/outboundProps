@@ -4,92 +4,14 @@
 		:style="{ 'background-image': 'url(' + home.background + ')' }"
 	>
 		<TheHeader />
-		<main @click="closeAll"></main>
-		<div>
+		<div class="home-details__container" @click="closeAll">
 			<transition name="raise">
 				<div v-show="detailsOpen" class="details">
-					<div class="details__title">The Oswego Home</div>
+					<div class="details__title">The {{ home.name }} Home</div>
 					<div class="details__desc">
 						<p v-for="detail in home.descriptionArray">
               {{ detail }}
 						</p>
-					</div>
-				</div>
-			</transition>
-			<transition name="raise">
-				<div v-if="optionsOpen" class="options">
-					<div class="options__container">
-						<div class="options--1">
-							<div class="options__title">Beach</div>
-							<div class="options__desc">
-								<ul>
-									<li>+ Sears Appliances</li>
-									<li>+ Choice of Exterior Color</li>
-									<li>+ Choice of Interior Color</li>
-									<li>+ Option 3</li>
-									<li>+ Option 4</li>
-									<li>+ Option 5</li>
-								</ul>
-								<div class="options__price">
-									* Cost Included In Base Price
-								</div>
-								<div>
-									<button
-										class="options__button"
-										@click.stop="optionSelected('beach')"
-									>
-										SELECT
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="options--2">
-							<div class="options__title">Lagoon</div>
-							<div class="options__desc">
-								<ul>
-									<li>+ Sears Appliances</li>
-									<li>+ Choice of Exterior Color</li>
-									<li>+ Choice of Interior Color</li>
-									<li>+ Option 3</li>
-									<li>+ Option 4</li>
-									<li>+ Option 5</li>
-								</ul>
-								<div class="options__price">$5,000</div>
-								<div>
-									<button
-										class="options__button"
-										@click.stop="optionSelected('lagoon')"
-									>
-										SELECT
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="options--3">
-							<div class="options__title">Open Water</div>
-							<div class="options__desc">
-								<ul>
-									<li>+ Sears Appliances</li>
-									<li>+ Choice of Exterior Color</li>
-									<li>+ Choice of Interior Color</li>
-									<li>+ Option 3</li>
-									<li>+ Option 4</li>
-									<li>+ Option 5</li>
-								</ul>
-								<div class="options__price">$10,000</div>
-								<div>
-									<button
-										class="options__button"
-										@click.stop="optionSelected('open water')"
-									>
-										SELECT
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tip">
-						Select to Reseve Your Spot for this Home
 					</div>
 				</div>
 			</transition>
@@ -122,9 +44,9 @@
 		<div class="info">
 			<div class="info__container">
 				<div>
-					<div class="info-title">The Oswego Home</div>
+					<div class="info-title">The {{ home.name }} Home</div>
 					<div class="info__desc">
-						2,438 SQ FEET / 4 BED / 3.5 BATH / $549k
+						{{ home.footage }} / {{ home.beds }} BED / {{ home.baths }} BATH / ${{ home.price }}
 					</div>
 				</div>
 				<div class="info__controls">
@@ -134,13 +56,6 @@
 						:class="{ buttonActive: detailsOpen }"
 					>
 						DETAILS
-					</button>
-					<button
-						class="home-button"
-						@click.stop="toggleOptions"
-						:class="{ buttonActive: optionsOpen }"
-					>
-						OPTIONS
 					</button>
 					<button
 						class="home-button"

@@ -39,7 +39,7 @@
 							</div>
 							<div class="welcome__details--buttons">
 								<div>
-									<router-link to="/oswego">
+									<router-link to="/rowan">
 										<button class="btn-both-sides">
 											Begin Tour of Maple Wood Grove
 										</button>
@@ -81,7 +81,7 @@
 	}
 
 	.welcome {
-		background-image: url('../assets/homes/home1/home-hero.jpg');
+		background-image: url('../assets/outbound-welcome.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;

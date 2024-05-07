@@ -16,11 +16,15 @@ p {
     background: $colorWhite;
     opacity: .98;
     z-index: 5;
-    
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10rem;
     
     &__container {
         width: 100%;
@@ -89,6 +93,9 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10rem;
     
 
     &__title {
@@ -132,6 +139,7 @@ p {
     background: $colorWhite;
     width: 100%;
     padding: 1.5rem 0;
+    height: 11rem;
 
     &-title {
         font-size: 1.7rem;
