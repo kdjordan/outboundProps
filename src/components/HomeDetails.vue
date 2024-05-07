@@ -125,9 +125,7 @@
 				}, 300);
 			},
 			getFloorPlan(homeName) {
-				console.log(homeName.toLowerCase(), pdf)
 				window.open(`/src/assets/PDF/${homeName.toLowerCase()}.pdf`, '_blank')
-
 			},
 			optionSelected(option) {
 				this.optionsOpen = false;
@@ -145,43 +143,5 @@
 
 <style lang="scss">
 	@import '@/scss/_variables.scss';
-	@import '@/scss/_typography.scss';
 	@import '@/scss/_page.scss';
-
-	.home-details {
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		flex: 1 0 auto;
-
-		&__container {
-			flex: 1 0 auto;
-			min-height: 100%;
-		}
-	}
-
-	img {
-		width: 100%;
-		object-fit: cover;
-	}
-
-	.raise-enter-active {
-		animation: raiseLower 0.3s linear;
-	}
-	.raise-leave-leave {
-		animation: raiseLower 0.3s linear reverse;
-	}
-	@keyframes raiseLower {
-		0% {
-			max-height: 0vh;
-			opacity: 0;
-		}
-		100% {
-			max-height: 80vh;
-			opacity: 1;
-		}
-	}
 </style>

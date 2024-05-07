@@ -9,8 +9,7 @@
 					<div class="welcome__content--subtitle">- Presents -</div>
 					<div class="welcome__content--image">
 						<img
-							src="@/assets/mwgLogos/SVG/logo1-1.svg"
-							:key="index"
+							src="@/assets/mwg-2.png"
 						/>
 					</div>
 					<div>
@@ -86,7 +85,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		height: 100vh;
-        width: 100vw;
+    width: 100vw;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -99,7 +98,7 @@
 			padding: 1rem;
 			margin-top: 5%;
 			min-height: 0% !important;
-            max-width: 1250px;
+      max-width: 1250px;
 
 			@media (max-width: 560px) {
 				width: 95%;
@@ -137,7 +136,7 @@
 			&--image {
                 margin-top: 1rem;
 				width: 100%;
-				max-width: 200px;
+				max-width: 500px;
 				object-fit: cover;
 			}
 
@@ -196,6 +195,11 @@
 			color: white;
 		}
 	}
+
+	img {
+    width: 100%;
+    object-fit: cover;
+}
 
 	@media (min-width: 750px) {
 		.welcome__details--buttons {

@@ -2,7 +2,11 @@
 	<div class="header">
 		<div class="header-container">
 			<div class="header-container__left">
+			<router-link
+				to="/"
+			>
 				<img src="../assets/ob-logo-wht.svg" alt="" class="logo" />
+			</router-link>
 			</div>
 			<div class="header-container__right">
 				<nav>
@@ -15,11 +19,9 @@
 						>
 						{{ home.name }}
 					</router-link>
-					<router-link
-						to=""
-						class="header-container__right--link"
-						>Contact</router-link
-					> 
+					<li>
+						<a href="mailto:don@bothsidesconstruction.com?subject=I'm intereseted in a MWG Home !" target="_blank">CONTACT</a>
+					</li>
 					</ul>
 				</nav>
 			</div>
@@ -39,13 +41,12 @@
 
 			]
 			}
-		}
-		// methods: {
-		// 	doEmailModal() {
-		// 		this.$store.commit('setModalContact', true);
-		// 		this.$store.commit('toggleModal');
-		// 	},
-		// },
+		},
+		methods: {
+			sendMail() {
+				
+			},
+		},
 	};
 </script>
 
