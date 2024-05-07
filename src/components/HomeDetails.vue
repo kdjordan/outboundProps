@@ -46,7 +46,7 @@
 				<div>
 					<div class="info-title">The {{ home.name }} Home</div>
 					<div class="info__desc">
-						{{ home.footage }} / {{ home.beds }} BED / {{ home.baths }} BATH / ${{ home.price }}
+						{{ home.footage }} / {{ home.beds }} BED / {{ home.baths }} BATH 
 					</div>
 				</div>
 				<div class="info__controls">
@@ -59,7 +59,7 @@
 					</button>
 					<button
 						class="home-button"
-						@click.stop="toggleFloorPlan"
+						@click.stop="getFloorPlan(`${home.name}`)"
 						:class="{ buttonActive: floorPlanOpen }"
 					>
 						FLOORPLAN
@@ -80,7 +80,7 @@
 
 <script>
 	import TheHeader from '@/components/TheHeader.vue';
-
+	import pdf from '@/assets/PDF/nadia.pdf'
 	export default {
 		components: {
 			TheHeader,
@@ -124,12 +124,10 @@
 					this.optionsOpen = !this.optionsOpen;
 				}, 300);
 			},
-			toggleFloorPlan() {
-				this.optionsOpen = false;
-				this.detailsOpen = false;
-				setTimeout(() => {
-					this.floorPlanOpen = !this.floorPlanOpen;
-				}, 300);
+			getFloorPlan(homeName) {
+				console.log(homeName.toLowerCase(), pdf)
+				window.open(`/src/assets/PDF/${homeName.toLowerCase()}.pdf`, '_blank')
+
 			},
 			optionSelected(option) {
 				this.optionsOpen = false;
