@@ -3,12 +3,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    // flex: 1 0 auto;
-    width: 100%;
-    height: 100%;
+    flex: 1 0 auto;
+
 
     &__container {
         flex: 1 0 auto;
@@ -100,64 +100,66 @@ p {
 //     }
 // }
 
-// .details {    
-//     font-family: $fontRoboto;
-//     padding: 2rem 0;
-//     background: $colorWhite;
-//     opacity: .98;
-//     z-index: 5;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     position: absolute;
-//     bottom: 0;
-//     margin-bottom: 10rem;
+.details {    
+    font-family: $fontRoboto;
+    padding: 2rem 0;
+    background: $colorWhite;
+    opacity: .98;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10rem;
     
 
-//     &__title {
-//         text-align: center;
-//         padding: 1rem;
-//         font-size: 2rem;
-//     }
+    &__title {
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+    }
 
-//     &__desc {
-//         font-family: $fontRoboto;
-//         width: 80%;
-//         margin: 0 auto;
-//     }
+    &__desc {
+        font-family: $fontRoboto;
+        width: 80%;
+        margin: 0 auto;
+    }
 
-//     &__img {
-//         padding: 2rem;
-//         width: 100%;
-//         overflow: auto;
-//         border: 1px solid $colorWhite;
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: space-around;
+    &__img {
+        padding: 2rem;
+        width: 100%;
+        overflow: auto;
+        border: 1px solid $colorWhite;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
 
-//         & img {
-//             width: 20%;
-//             min-width: 200px;
-//             margin: 1.25%;
-//             cursor: pointer;
-//             transition: all .4s;
+        & img {
+            width: 20%;
+            min-width: 200px;
+            margin: 1.25%;
+            cursor: pointer;
+            transition: all .4s;
 
-//             &:hover {
-//                 box-shadow: 1px 3px 10px rgba(0,0,0, .8);
-//             }
-//         }
-//     }
-// }
+            &:hover {
+                box-shadow: 1px 3px 10px rgba(0,0,0, .8);
+            }
+        }
+    }
+}
 
-.info {
+.bottom {
     z-index: 10;
     border-top: 1px solid grey;
     background: $colorWhite;
     width: 100%;
     padding: 1.5rem 0;
     height: 11rem;
+    position: absolute;
+    bottom: 0;
 
     &-title {
         font-size: 1.7rem;

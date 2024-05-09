@@ -4,7 +4,7 @@
 		:style="{ 'background-image': 'url(' + home.background + ')' }"
 	>
 		<TheHeader />
-		<div class="home-details__container" @click="closeAll">
+		<!-- <div class="home-details__container" @click="closeAll">
 			<transition name="raise">
 				<div v-show="detailsOpen" class="details">
 					<div class="details__title">The {{ home.name }} Home</div>
@@ -15,11 +15,10 @@
 					</div>
 				</div>
 			</transition>
-		</div>
-		<div>
+		</div> -->
+		<!-- <div>
 			<transition name="raise">
 				<div v-if="floorPlanOpen" class="details">
-					<!-- <div class="details__title">Plan1</div> -->
 					<div class="details__img">
 						<img
 							src="../../assets/homes/home1/floorplan-1.jpg"
@@ -40,9 +39,9 @@
 					</div>
 				</div>
 			</transition>
-		</div>
-		<div class="info">
-			<div class="info__container">
+		</div> -->
+		<div class="bottom">
+			<div class="bottom__container">
 				<div>
 					<div class="info-title">The {{ home.name }} Home</div>
 					<div class="info__desc">
@@ -143,5 +142,6 @@
 
 <style lang="scss">
 	@import '@/scss/_variables.scss';
+	@import '@/scss/_typography.scss';
 	@import '@/scss/_page.scss';
 </style>
