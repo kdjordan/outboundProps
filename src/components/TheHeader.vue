@@ -35,9 +35,9 @@
 		</div>
 		<div>
 			<div class="mobile-header--menu" @click.native="toggleMobileMenu">
-				<span></span>
-				<span></span>
-				<span></span>
+				<span id="one"></span>
+				<span id="two"></span>
+				<span id="three"></span>
 			</div>
 			<ul class="mobile-header__drawer">
 				<router-link
@@ -50,6 +50,13 @@
 				>
 					{{ home.name }}
 				</router-link>
+				<li class="mobile-header__drawer--link">
+					<a
+						href="mailto:don@bothsidesconstruction.com?subject=I'm intereseted in a MWG Home !"
+						target="_blank"
+						>contact</a
+					>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -67,21 +74,28 @@
 				],
 				mobileDrawerOpen: false,
 				theDrawer: '',
+				spans: []
 			};
 		},
 		methods: {
 			toggleMobileMenu() {
 				this.mobileDrawerOpen = !this.mobileDrawerOpen;
-				this.mobileDrawerOpen
-					? this.theDrawer.classList.add('open')
-					: this.theDrawer.classList.remove('open');
+
+				if(this.mobileDrawerOpen) {
+					this.theDrawer.classList.add('open')
+					this.spans.forEach(s => s.classList.add('open'))
+				} else {
+					this.theDrawer.classList.remove('open')
+					this.spans.forEach(s => s.classList.remove('open'))
+				}
+				
 			},
 		},
 		mounted() {
 			this.theDrawer = document.querySelector(
 				'.mobile-header__drawer'
 			);
-			console.log(this.theDrawer);
+			this.spans = document.querySelectorAll('span')
 		},
 	};
 </script>
