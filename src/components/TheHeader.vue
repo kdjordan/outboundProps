@@ -30,7 +30,7 @@
 	<div class="mobile-header">
 		<div>
 			<router-link to="/">
-				<img src="../assets/ob-logo-wht.svg" alt="" class="logo" />
+				<img src="../assets/ob-logo-wht.svg" alt="" class="logo" /> 
 			</router-link>
 		</div>
 		<div class="mobile-header__right">
@@ -46,7 +46,7 @@
 					:to="`${home.name}`"
 					class="mobile-header__drawer--link"
 					active-class="isActive"
-					@click="toggleMobileMenu"
+					@click="toggleMobileMenu()"
 				>
 					{{ home.name }}
 				</router-link>
