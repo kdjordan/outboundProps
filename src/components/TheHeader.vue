@@ -33,7 +33,7 @@
 				<img src="../assets/ob-logo-wht.svg" alt="" class="logo" /> 
 			</router-link>
 		</div>
-		<div class="mobile-header__right">
+		<div>
 			<div class="mobile-header--menu" @click.native="toggleMobileMenu">
 				<span></span>
 				<span></span>

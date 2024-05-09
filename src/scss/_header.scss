@@ -1,5 +1,4 @@
 .header {
-
 	background: transparent;
 	position: absolute;
 	top: 0;
@@ -50,7 +49,8 @@
 }
 
 .mobile-header {
-  display: none;
+	display: none;
+
 	@media (max-width: 820px) {
 		padding: 0.4rem;
 		display: flex;
@@ -58,32 +58,28 @@
 		justify-content: space-between;
 
 		& .logo {
-			width: 20%;
+			width: 60%;
 		}
 
 		&__drawer {
+			overflow-x: hidden;
 			z-index: 1;
-			padding: 10% 0;
-			position: absolute;
+			padding: 15% 0;
+			position: fixed;
 			top: 0;
 			left: 100vw;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			gap: 10px;
-			width: 50%;
-      border-radius: 10px;
-			// height: 100vh;
-      opacity: 0;
-			// background: red;
-      transition: all .4s ease;
-			// transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-		  //             background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-		  //             opacity 0.55s ease;
-
+			width: 75%;
+			border-radius: 10px 0 0 10px;
+			opacity: 0;
+			transition: all 0.4s ease;
+			
 			&--link {
 				color: $colorBlack;
-        text-transform: uppercase;
+				text-transform: uppercase;
 				border-bottom: 2px solid transparent;
 				border-top: 2px solid transparent;
 				transition: all 0.4s linear;
@@ -119,15 +115,13 @@
 }
 
 .open {
-  background: $colorWhite;
-  opacity: 1;
-	left: 50%;
+	background: $colorWhite;
+	opacity: 1;
+	left: 25%;
 }
 
 .span-open {
 	transform-origin: 4px 0px;
-
-	
 }
 
 .isActive {
