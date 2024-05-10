@@ -1,24 +1,211 @@
-
 .home-details {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: calc(100vh - 11rem);
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
 
-
-    &__container {
-        flex: 1 0 auto;
-        min-height: 100%;
-    }
+	&__container {
+		flex: 1 0 auto;
+		min-height: 100%;
+	}
 }
 
 p {
-    margin: 1rem 0;
+	margin: 1rem 0;
 }
+
+.details {
+	font-family: $fontRoboto;
+	padding: 2rem 0;
+	background: $colorWhite;
+	opacity: 0.98;
+	z-index: 5;
+    height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    position: fixed;
+    transform: translateY(100%);
+    overflow: hidden;
+	// position: fixed;
+	// bottom: -200vh;
+    transition: all .7s ease;
+
+	&__title {
+		text-align: center;
+		padding: 1rem;
+		font-size: 2rem;
+	}
+
+	&__desc {
+		font-family: $fontRoboto;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	&__img {
+		padding: 2rem;
+		width: 100%;
+		overflow-y: scroll;
+		border: 1px solid $colorWhite;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		& img {
+			width: 20%;
+			min-width: 200px;
+			margin: 1.25%;
+			cursor: pointer;
+			transition: all 0.4s;
+
+			&:hover {
+				box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.8);
+			}
+		}
+	}
+}
+
+.panel-open {
+    display: block;
+    transform: translateY(0%);
+    height: 100%;
+    padding-bottom: 20rem;
+    overflow-y: scroll;
+}
+
+.bottom {
+	border-top: 1px solid grey;
+	background: $colorWhite;
+	width: 100%;
+	padding: 1.5rem 0;
+	height: 11rem;
+	position: absolute;
+	bottom: 0;
+    z-index: 10;
+
+    @media screen and (max-width: 600px) {
+        padding: .75rem 0;
+    }
+
+	&-title {
+		font-size: 1.7rem;
+	}
+
+	&__container {
+		padding: 0 1rem;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		@media screen and (max-width: 600px) {
+            // padding: 0 rem;
+			flex-direction: column;
+		}
+
+		&--title {
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 2rem;
+
+            @media screen and (max-width: 600px) {
+                font-size: 1.2rem;
+            }
+		}
+
+        & .button-container {
+            display: flex;
+        }
+	}
+
+	&__controls {
+		display: flex;
+		width: 50%;
+		flex-wrap: wrap;
+		padding: 2rem;
+
+		@media screen and (max-width: 600px) {
+			width: 100%;
+		}
+	}
+
+	&__next {
+		display: flex;
+		align-items: center;
+		& span {
+			font-size: 2rem;
+			margin-bottom: 0.2rem;
+		}
+	}
+}
+
+.controls {
+    flex-direction: column;
+    align-self: flex-end;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.home-button {
+	white-space: nowrap;
+	font-size: 1rem;
+	letter-spacing: inherit;
+	cursor: pointer;
+	border: 1px solid $color1;
+	background: transparent;
+	padding: 0.5rem 1.5rem;
+	transition: all 0.4s;
+	color: $color1;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0.5rem 1rem;
+	outline: none;
+    border-radius: 5px;
+
+	&:hover,
+	&:active {
+		background: $color1;
+		color: $colorWhite;
+	}
+}
+
+.buttonActive {
+	background: $color1;
+	color: $colorWhite;
+}
+
+//ANIMATIONS
+.raise-enter-active {
+	animation: raiseLower 0.3s linear;
+}
+.raise-leave-leave {
+	animation: raiseLower 0.3s linear reverse;
+}
+@keyframes raiseLower {
+	0% {
+		max-height: 0vh;
+		opacity: 0;
+	}
+	100% {
+		max-height: 80vh;
+		opacity: 1;
+	}
+}
+
+
 // .tip {
 //     background: $color1;
 //     color: $colorWhite;
@@ -28,7 +215,7 @@ p {
 //     border: 1px solid $color1;
 // }
 
-// .options {    
+// .options {
 //     font-family: $fontRoboto;
 //     padding: 2rem 0;
 //     background: $colorWhite;
@@ -43,7 +230,7 @@ p {
 //     position: absolute;
 //     bottom: 0;
 //     margin-bottom: 10rem;
-    
+
 //     &__container {
 //         width: 100%;
 //         display: flex;
@@ -96,154 +283,5 @@ p {
 //             color: $colorWhite;
 //         }
 
-
 //     }
 // }
-
-.details {    
-    font-family: $fontRoboto;
-    padding: 2rem 0;
-    background: $colorWhite;
-    opacity: .98;
-    z-index: 5;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 10rem;
-    
-
-    &__title {
-        text-align: center;
-        padding: 1rem;
-        font-size: 2rem;
-    }
-
-    &__desc {
-        font-family: $fontRoboto;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    &__img {
-        padding: 2rem;
-        width: 100%;
-        overflow: auto;
-        border: 1px solid $colorWhite;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-        & img {
-            width: 20%;
-            min-width: 200px;
-            margin: 1.25%;
-            cursor: pointer;
-            transition: all .4s;
-
-            &:hover {
-                box-shadow: 1px 3px 10px rgba(0,0,0, .8);
-            }
-        }
-    }
-}
-
-.bottom {
-    z-index: 10;
-    border-top: 1px solid grey;
-    background: $colorWhite;
-    width: 100%;
-    padding: 1.5rem 0;
-    height: 11rem;
-    position: absolute;
-    bottom: 0;
-
-    &-title {
-        font-size: 1.7rem;
-    }
-
-    &__container {
-        padding: 0 1rem;
-        width: 100%;
-        z-index: 10  !important;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        overflow: auto;
-
-        @media screen and (max-width: 600px) {
-            flex-direction: column;
-            
-        }
-    }
-
-    &__controls {
-        display: flex;
-        width: 50%;
-        flex-wrap: wrap;
-        padding: 2rem;
-
-        @media screen and (max-width: 600px) {
-            width: 100%;
-        }
-    }
-
-    &__next {
-        display: flex;
-        align-items: center;
-        & span {
-            font-size: 2rem;
-            margin-bottom: .2rem;
-        }
-    }
-
-}
-
-.home-button {
-    white-space: nowrap;
-    font-size: 1rem;
-    letter-spacing: inherit;
-    cursor: pointer;
-    border: 1px solid $color1;
-    background: transparent;
-    padding: .5rem 1.5rem;
-    transition: all .4s;
-    color: $color1;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: .5rem 1rem;
-    outline: none;
-
-    &:hover, &:active {
-        background: $color1;
-        color: $colorWhite;
-    }
-}
-
-.buttonActive {
-    background: $color1;
-    color: $colorWhite;
-}
-
-
-//ANIMATIONS
-.raise-enter-active {
-    animation: raiseLower 0.3s linear;
-}
-.raise-leave-leave {
-    animation: raiseLower 0.3s linear reverse;
-}
-@keyframes raiseLower {
-    0% {
-        max-height: 0vh;
-        opacity: 0;
-    }
-    100% {
-        max-height: 80vh;
-        opacity: 1;
-    }
-}

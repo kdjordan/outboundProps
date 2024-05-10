@@ -4,20 +4,18 @@
 		:style="{ 'background-image': 'url(' + home.background + ')' }"
 	>
 		<TheHeader />
-		<!-- <div class="home-details__container" @click="closeAll">
-			<transition name="raise">
-				<div v-show="detailsOpen" class="details">
-					<div class="details__title">The {{ home.name }} Home</div>
-					<div class="details__desc">
-						<p v-for="detail in home.descriptionArray">
-              {{ detail }}
-						</p>
-					</div>
+		<div class="home-details__container" @click="closeAll">
+			<div class="details">
+				<div class="details__title">The {{ home.name }} Home</div>
+				<div class="details__desc">
+					<p v-for="detail in home.descriptionArray">
+						{{ detail }}
+					</p>
 				</div>
-			</transition>
-		</div> -->
-		<!-- <div>
-			<transition name="raise">
+			</div>
+		</div>
+		<div>
+			<!-- <transition name="raise">
 				<div v-if="floorPlanOpen" class="details">
 					<div class="details__img">
 						<img
@@ -38,17 +36,20 @@
 						/>
 					</div>
 				</div>
-			</transition>
-		</div> -->
+			</transition> -->
+		</div>
 		<div class="bottom">
 			<div class="bottom__container">
 				<div>
-					<div class="info-title">The {{ home.name }} Home</div>
-					<div class="info__desc">
-						{{ home.footage }} / {{ home.beds }} BED / {{ home.baths }} BATH 
+					<div class="bottom__container--title">
+						The {{ home.name }} Home
+					</div>
+					<div>
+						{{ home.footage }} / {{ home.beds }} BED /
+						{{ home.baths }} BATH
 					</div>
 				</div>
-				<div class="info__controls">
+				<div class="button-container">
 					<button
 						class="home-button"
 						@click.stop="toggleDetails"
@@ -64,12 +65,10 @@
 						FLOORPLAN
 					</button>
 				</div>
-				<div class="info__next">
+				<div class="button-container controls">
+					<button class="home-button" @click="goNextHome">>></button>
 					<button class="home-button" @click="goPreviousHome">
-						PREVIOUS
-					</button>
-					<button class="home-button" @click="goNextHome">
-						NEXT
+						<<
 					</button>
 				</div>
 			</div>
@@ -79,7 +78,6 @@
 
 <script>
 	import TheHeader from '@/components/TheHeader.vue';
-	import pdf from '@/assets/PDF/nadia.pdf'
 	export default {
 		components: {
 			TheHeader,
@@ -90,51 +88,52 @@
 				required: true,
 			},
 		},
+		mounted() {
+			this.detailsPanel = document.querySelector('.details');
+			console.log(this.detailsPanel);
+		},
 		data() {
 			return {
-				detailsOpen: false,
-				optionsOpen: false,
+				detailsPanel: null,
+				detailsPanelOpen: false,
 				floorPlanOpen: false,
+				homeList: ['rowan', 'keagan', 'myles', 'nadia'],
+				index: 0,
 			};
 		},
 		methods: {
 			goNextHome() {
-				this.$router.push('/home2');
+				this.index < this.homeList.length - 1
+					? this.index++
+					: (this.index = 0);
+				this.$router.push(`/${this.homeList[this.index]}`);
 			},
 			goPreviousHome() {
-				this.$router.push('/home4');
+				this.index > 0
+					? this.index--
+					: (this.index = this.homeList.length - 1);
+				this.$router.push(`/${this.homeList[this.index]}`);
 			},
 			closeAll() {
-				this.detailsOpen = false;
-				this.optionsOpen = false;
+				this.detailsPanelOpen = false;
 				this.floorPlanOpen = false;
 			},
 			toggleDetails() {
-				this.optionsOpen = false;
-				this.floorPlanOpen = false;
-				setTimeout(() => {
-					this.detailsOpen = !this.detailsOpen;
-				}, 300);
-			},
-			toggleOptions() {
-				this.detailsOpen = false;
-				this.floorPlanOpen = false;
-				setTimeout(() => {
-					this.optionsOpen = !this.optionsOpen;
-				}, 300);
+				console.log('clickin')
+				this.detailsPanelOpen = !this.detailsPanelOpen
+				this.detailsPanelOpen
+					? this.detailsPanel.classList.add('panel-open')
+					: this.detailsPanel.classList.remove('panel-open')
+				// this.floorPlanOpen = false;
+				// setTimeout(() => {
+				// 	this.detailsOpen = !this.detailsOpen;
+				// }, 300);
 			},
 			getFloorPlan(homeName) {
-				window.open(`/src/assets/PDF/${homeName.toLowerCase()}.pdf`, '_blank')
-			},
-			optionSelected(option) {
-				this.optionsOpen = false;
-				this.$store.commit('setHomeSelection', {
-					home: 'Oswego',
-					option: option,
-				});
-				this.$store.commit('toggleModal');
-				this.$store.commit('setModalContact', false);
-				console.log(option);
+				window.open(
+					`/src/assets/PDF/${homeName.toLowerCase()}.pdf`,
+					'_blank'
+				);
 			},
 		},
 	};
