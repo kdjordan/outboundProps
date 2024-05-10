@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="home-details"
-		:style="{ 'backgroundImage': 'url(' + home.background + ') !important' }"
+		:style="{ 'backgroundImage': 'url(' + home.background + ')' }"
 	>
 		<TheHeader />
 		<div class="home-details__container" @click="closeAll">
