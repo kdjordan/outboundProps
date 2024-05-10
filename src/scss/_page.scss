@@ -30,11 +30,11 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: fixed;
+	position: absolute;
 	// transform: translateY(100%);
 	overflow: hidden;
-	// position: fixed;
-	bottom: -200vh;
+	position: fixed;
+	bottom: -100vh;
 	transition: all 0.7s ease;
 
 	&__title {
@@ -75,9 +75,9 @@ p {
 .panel-open {
 	display: block;
 	// transform: translateY(0%);
-	bottom: -10vh;
+	bottom: -20vh;
 	// height: 100%;
-	padding-bottom: 20rem;
+	padding-bottom: calc(100vh - 130%);
 	overflow-y: scroll;
 }
 
@@ -87,7 +87,7 @@ p {
 	width: 100%;
 	padding: 1.5rem 0;
 	height: 11rem;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	z-index: 10;
 
