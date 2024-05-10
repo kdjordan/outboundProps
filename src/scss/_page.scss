@@ -76,7 +76,7 @@ p {
 .panel-open {
 	display: block;
 	bottom: -15vh;
-	padding-bottom: calc(100vh - 130%);
+	padding-bottom: calc(100vh - 120%);
 	overflow-y: scroll;
 
 	@media screen and (min-width: 800px) {
@@ -110,7 +110,6 @@ p {
 		justify-content: space-around;
 
 		@media screen and (max-width: 600px) {
-			// padding: 0 rem;
 			flex-direction: column;
 		}
 
