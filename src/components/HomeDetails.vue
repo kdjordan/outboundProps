@@ -5,7 +5,7 @@
 	>
 		<TheHeader />
 		<div class="home-details__container" @click="closeAll">
-			<div class="details">
+			<div class="details" id="details-top">
 				<div class="details__title">The {{ home.name }} Home</div>
 				<div class="details__desc">
 					<p v-for="detail in home.descriptionArray">
@@ -52,15 +52,15 @@
 				<div class="button-container">
 					<button
 						class="home-button"
-						@click.stop="toggleDetails"
-						:class="{ buttonActive: detailsOpen }"
+						@click.stop="toggleDetails(false)"
+						
 					>
 						DETAILS
 					</button>
 					<button
 						class="home-button"
 						@click.stop="getFloorPlan(`${home.name}`)"
-						:class="{ buttonActive: floorPlanOpen }"
+						
 					>
 						FLOORPLAN
 					</button>
@@ -90,7 +90,6 @@
 		},
 		mounted() {
 			this.detailsPanel = document.querySelector('.details');
-			console.log(this.detailsPanel);
 		},
 		data() {
 			return {
@@ -107,27 +106,33 @@
 					? this.index++
 					: (this.index = 0);
 				this.$router.push(`/${this.homeList[this.index]}`);
+				this.toggleDetails(true)
+				
 			},
 			goPreviousHome() {
 				this.index > 0
 					? this.index--
 					: (this.index = this.homeList.length - 1);
 				this.$router.push(`/${this.homeList[this.index]}`);
+				this.toggleDetails(true)
 			},
 			closeAll() {
+				console.log('clicked')
 				this.detailsPanelOpen = false;
-				this.floorPlanOpen = false;
+				
 			},
-			toggleDetails() {
-				console.log('clickin')
-				this.detailsPanelOpen = !this.detailsPanelOpen
-				this.detailsPanelOpen
-					? this.detailsPanel.classList.add('panel-open')
-					: this.detailsPanel.classList.remove('panel-open')
-				// this.floorPlanOpen = false;
-				// setTimeout(() => {
-				// 	this.detailsOpen = !this.detailsOpen;
-				// }, 300);
+			toggleDetails(flag) {
+				if(flag) {
+					this.detailsPanelOpen = false
+					this.detailsPanel.classList.remove('panel-open')
+				} 
+				
+				if (!flag) {
+					this.detailsPanelOpen = !this.detailsPanelOpen
+					this.detailsPanelOpen
+						? this.detailsPanel.classList.add('panel-open')
+						: this.detailsPanel.classList.remove('panel-open')
+				}
 			},
 			getFloorPlan(homeName) {
 				window.open(

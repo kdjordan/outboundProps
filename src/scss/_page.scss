@@ -3,7 +3,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	overflow-y: hidden;
-	height: calc(100vh - 11rem);
+	height: calc(100vh - 10rem);
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
@@ -75,11 +75,13 @@ p {
 
 .panel-open {
 	display: block;
-	// transform: translateY(0%);
-	bottom: -20vh;
-	// height: 100%;
+	bottom: -15vh;
 	padding-bottom: calc(100vh - 130%);
 	overflow-y: scroll;
+
+	@media screen and (min-width: 800px) {
+		bottom: -10vh;
+	}
 }
 
 .bottom {
@@ -177,17 +179,16 @@ p {
 	outline: none;
 	border-radius: 5px;
 
-	&:hover,
-	&:active {
+	&:hover {
 		background: $color1;
 		color: $colorWhite;
 	}
 }
 
-.buttonActive {
-	background: $color1;
-	color: $colorWhite;
-}
+// .buttonActive {
+// 	background: $color1;
+// 	color: $colorWhite;
+// }
 
 //ANIMATIONS
 .raise-enter-active {
