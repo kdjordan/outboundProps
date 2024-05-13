@@ -129,7 +129,6 @@
         this.detailsPanelOpen = !this.detailsPanelOpen;
         if (this.detailsPanelOpen) {
             this.detailsPanel.classList.add('panel-open');
-						console.log('scrolling to top')
             this.scrollTop(); // Scroll to the top when opening
         } else {
             this.detailsPanel.classList.remove('panel-open');
@@ -138,13 +137,12 @@
 			},
 			getFloorPlan(homeName) {
 				window.open(
-					`/src/assets/PDF/${homeName.toLowerCase()}.pdf`,
+					`./PDF/${homeName.toLowerCase()}.pdf`,
 					'_blank'
 				);
 			},
 			scrollTop() {
 				const scrolly = document.querySelector('.details__title')
-				console.log(scrolly)
 				scrolly.scrollIntoView({block: "start"})
 			}
 		},
