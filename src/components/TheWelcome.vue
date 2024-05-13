@@ -148,7 +148,6 @@
 			}
 
 			&--buttons {
-				height: 100%;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
@@ -160,6 +159,7 @@
 	}
 
 	.btn-both-sides {
+		border-radius: 5px;
 		cursor: pointer;
 		margin-top: 0.5rem;
 		padding: 0.5rem 1rem;
