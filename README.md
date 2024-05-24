@@ -1,25 +1,12 @@
-# outbound props
+# Outbound Properties
 
-This template should help get you started developing with Vue 3 in Vite.
+> A Client Vue.js project for a new development in NE Portland Oregon
 
-## Recommended IDE Setup
+This site is still under development.  
+I am waiting on content to fill in the dummy text that I have provided.  
+I designed the logo and the layout of the site and am participating in the marketing copy.  
+Permits are being pulled, and it's looking like the team will be moving dirt early Summer 2020
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### ScreenShot
+![Outbound Props Screeshot](https://github.com/kdjordan/outbound/blob/master/outbound-screenshot.png)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-## nees a test deploy
