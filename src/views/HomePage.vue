@@ -6,11 +6,11 @@
 				<a href="mailto:don@bothsidesconstruction.com?subject=I'm interested in a MWG Home">Contact</a>
 			</nav>
 			<div class="home-hero__content">
-				<p>Maple Wood Grove / Northeast Portland</p>
-				<h1>Four crafted homes in a quiet Portland enclave.</h1>
+				<p>MapleWood Grove / Northeast Portland</p>
+				<h1>Four crafted homes in the MapleWood Grove enclave.</h1>
 				<div class="home-hero__actions">
 					<router-link to="/rowan">Begin tour</router-link>
-					<a href="https://goo.gl/maps/Wp3XGMfnXJQ2byUJ8" target="_blank">View location</a>
+					<a href="https://goo.gl/maps/Wp3XGMfnXJQ2byUJ8" target="_blank" rel="noopener">View location</a>
 				</div>
 			</div>
 		</section>
@@ -34,10 +34,10 @@
 		<footer class="builder-footer">
 			<div>
 				<p>Built by Both Sides Construction</p>
-				<h2>Three decades of Portland-area residential craft behind Maple Wood Grove.</h2>
+				<h2>Three decades of Portland-area residential craft behind MapleWood Grove.</h2>
 			</div>
 			<div class="builder-footer__actions">
-				<a href="https://www.bothsidesconstruction.com/" target="_blank">bothsidesconstruction.com</a>
+				<a href="https://www.bothsidesconstruction.com/" target="_blank" rel="noopener">bothsidesconstruction.com</a>
 				<a href="mailto:don@bothsidesconstruction.com?subject=I'm interested in a MWG Home">Contact the builder</a>
 			</div>
 		</footer>

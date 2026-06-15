@@ -11,7 +11,7 @@
 				<div class="details__header">
 					<div>
 						<p>Home details</p>
-						<div class="details__title">The {{ home.name }} Home</div>
+						<h1 class="details__title">The {{ home.name }} Home</h1>
 					</div>
 					<button type="button" class="details__close" @click="toggleDetails(true)">
 						Close
