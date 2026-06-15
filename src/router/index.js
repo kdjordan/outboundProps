@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import TheWelcome from '@/components/TheWelcome.vue';
+import HomePage from '@/views/HomePage.vue';
 import HomeDetails from '@/components/HomeDetails.vue';
 import {
 	RowanDetailsArray,
@@ -14,7 +14,7 @@ const router = createRouter({
 		{
 			path: '/',
 			name: 'welcome',
-			component: TheWelcome,
+			component: HomePage,
 		},
 		{
 			path: '/rowan',

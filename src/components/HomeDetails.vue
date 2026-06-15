@@ -5,11 +5,20 @@
 			:style="{ backgroundImage: 'url(' + home.background + ')' }"
 		></div>
 		<TheHeader />
-		<div class="home-details__container" @click="closeAll">
-			<div class="details" id="details-top">
-				<div class="details__title">The {{ home.name }} Home</div>
+		<div class="home-details__shade" @click="closeAll"></div>
+		<div class="home-details__container">
+			<div class="details" :class="{ 'panel-open': detailsPanelOpen }" id="details-top">
+				<div class="details__header">
+					<div>
+						<p>Home details</p>
+						<div class="details__title">The {{ home.name }} Home</div>
+					</div>
+					<button type="button" class="details__close" @click="toggleDetails(true)">
+						Close
+					</button>
+				</div>
 				<div class="details__desc">
-					<p v-for="detail in home.descriptionArray">
+					<p v-for="detail in home.descriptionArray" :key="detail">
 						{{ detail }}
 					</p>
 				</div>
@@ -17,7 +26,7 @@
 		</div>
 		<div class="bottom">
 			<div class="bottom__container">
-				<div>
+				<div class="bottom__summary">
 					<div class="bottom__container--title">
 						The {{ home.name }} Home
 					</div>
@@ -41,10 +50,10 @@
 					</button>
 				</div>
 				<div class="button-container controls">
-					<button class="home-button" @click="goNextHome">>></button>
 					<button class="home-button" @click="goPreviousHome">
-						<<
+						Prev
 					</button>
+					<button class="home-button" @click="goNextHome">Next</button>
 				</div>
 			</div>
 		</div>
@@ -66,7 +75,7 @@
 			},
 		},
 		mounted() {
-			this.detailsPanel = document.querySelector('.details');
+			this.syncIndex();
 		},
 		data() {
 			return {
@@ -79,10 +88,15 @@
 		},
 		watch: {
 			home() {
+				this.syncIndex();
 				this.animateBackground();
 			},
 		},
 		methods: {
+			syncIndex() {
+				const index = this.homeList.indexOf(this.home.name.toLowerCase());
+				this.index = index === -1 ? 0 : index;
+			},
 			goNextHome() {
 				this.index < this.homeList.length - 1
 					? this.index++
@@ -120,14 +134,10 @@
 			toggleDetails(flag) {
 				if (flag) {
 					this.detailsPanelOpen = false;
-					this.detailsPanel.classList.remove('panel-open');
 				} else {
 					this.detailsPanelOpen = !this.detailsPanelOpen;
 					if (this.detailsPanelOpen) {
-						this.detailsPanel.classList.add('panel-open');
 						this.scrollTop(); // Scroll to the top when opening
-					} else {
-						this.detailsPanel.classList.remove('panel-open');
 					}
 				}
 			},
@@ -135,8 +145,10 @@
 				window.open(`./PDF/${homeName.toLowerCase()}.pdf`, '_blank');
 			},
 			scrollTop() {
-				const scrolly = document.querySelector('.details__title');
-				scrolly.scrollIntoView({ block: 'start' });
+				this.$nextTick(() => {
+					const scrolly = document.querySelector('.details__title');
+					scrolly?.scrollIntoView({ block: 'start' });
+				});
 			},
 		},
 	};
